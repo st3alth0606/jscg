@@ -25,7 +25,7 @@
 				<div class="zonerow">
 					<div class="specialzone"></div>
 					<div class="zone-container">
-						<div class="character-zone">
+						<div class="character-zonerow">
 							<div id="opponent-slot4" class="characterzone cardslot"></div>
 							<div id="opponent-slot3" class="characterzone cardslot"></div>
 							<div id="opponent-slot2" class="characterzone cardslot"></div> 
@@ -38,7 +38,7 @@
 					<div id="centerfield"></div>
 					<div class="specialzone"></div>
 					<div class="zone-container">
-						<div class="character-zone">
+						<div class="character-zonerow">
 							<div id="player-slot1" class="characterzone cardslot"></div>
 							<div id="player-slot2" class="characterzone cardslot"></div>
 							<div id="player-slot3" class="characterzone cardslot"></div>
