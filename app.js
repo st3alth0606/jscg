@@ -1,6 +1,6 @@
 // Main Server File
 
-// var eiffel = 0;
+var eiffel = 0;
 var port = 8080
 var playerList = [];
 var matches = [];
@@ -15,6 +15,7 @@ console.log('Jscg is running on http://localhost:' + port);
 var chat = io.on('connection', function(socket){
 	playerList[socket.id] = socket;
 
+	//Player drew a card
 	socket.on('move', function(cardId, target){
 		target = target.split('-')[1];
 
@@ -144,7 +145,7 @@ function getTopCard(){
 function getNewMatch(){
 	var match = {};
 
-	// match.id = eiffel++;
+	match.id = eiffel++;
 	match.players = [];
 	match.field = {};
 	match.field.a = {

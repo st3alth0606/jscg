@@ -89,7 +89,7 @@ function initField(){
 
     $('#end-turn').click(function(){
         if(devMode) //neko
-            drawCard(Math.round(Math.random()*2)+14, 'player');
+            drawCard(Math.round(Math.random()*14), 'player');
         else
     	   socket.emit('end_turn', '');
     });
@@ -281,7 +281,7 @@ function updateInspector(obj){
 		$( '#selected_hp' ).html(card.hp);
     else
 		$( '#selected_hp' ).html('');
-
+		
 	//Selected Class
     $( '#selected_class' ).html(card.class);
 
@@ -330,10 +330,11 @@ function updateInspector(obj){
  * Converts Element code into pictures.
  */
 function decodeElement(string, target){
-	if(string === ''){ return; } //Throw away requests with empty strings.
-
-	var code = JSON.parse(string);
 	target.html(' ');
+	if(string == ''){
+		return;
+	}
+	var code = JSON.parse(string);
 	for (i=0;i<code.phy;i++){
 		target.append('<img src="./img/icons/phy.png" valign="middle">');
 	}

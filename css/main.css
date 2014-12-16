@@ -22,6 +22,7 @@ body {
 	left: 0px;
 	width: auto;
 	height: 100%;
+	background-image: url("../img/tiles/grassplain.png");
 	margin-right: 255px;
 	overflow: auto;
 }
@@ -43,6 +44,7 @@ body {
 	width: 255px;
 	height: 100%;
 	background:gray;
+	background-image: url("../img/tiles/stonebrick.png");
 	border: 1px solid #444444;
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
@@ -61,16 +63,16 @@ body {
 	float: left;
 	margin: 15px;
 	box-sizing:border-box;
-	border: 1px solid #444444;
-	background-image: url("../img/0.png");
+	border: 1px solid black;
+	background-image: url("../img/cards/0.png");
 	background-size: 100% 100%;
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 }
 
 #textArea{
-	margin-left: 8px;
-	margin-right: 8px;
+	margin: 345px 8px 8px 8px;
+	background-image: url("../img/tiles/textbackdrop.png");
 }
 
 #sidebar-bottom {
@@ -111,7 +113,8 @@ body {
 	left: 95px;
 	margin-right: 190px;
 	box-sizing: border-box;
-	border: 1px solid darkgray;
+	border: 1px solid black;
+	background-image: url("../img/tiles/cardzone.png");
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 }
@@ -121,14 +124,15 @@ body {
 	float: left;
 	width: 75px;
 	height: 105px;
-	border: 1px solid darkgray;
+	border: 1px solid black;
 	margin: 5px 10px 5px 10px;
+	background-image: url("../img/tiles/cardzone.png");
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 }
 
 /* A card */
-.card {
+.card{
 	width: 75px;
 	height:105px;
 	font-size: .9em;
@@ -137,7 +141,7 @@ body {
 	left: -1px;
 	float: left;
 	box-sizing:border-box;
-	border: 1px solid darkgray;
+	border: 1px solid black;
 	background-image: url("../img/0.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
@@ -145,19 +149,20 @@ body {
 	-webkit-box-sizing:border-box;
 }
 
-.inslot {
+.inslot{
 	position: absolute !important;
 }
 
 /* A board slot for a card */
-.cardslot {
+.characterzone{
 	position: relative;
 	width: 75px;
 	height:105px;
 	float: left;
 	margin: 0px 5px 0px 5px;
 	box-sizing:border-box;
-	border: 1px solid darkgray;
+	border: 1px solid black;
+	background-image: url("../img/tiles/cardzone.png");
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 }
@@ -169,7 +174,7 @@ body {
 }
 
 /* A player's hand */
-.game-hand {
+.game-hand{
 	height: 105px;
 	width: auto;
 	display: block;
@@ -191,13 +196,16 @@ body {
 }
 
 table{
-	font-size: small;
+	font-size: 9pt;
+	font-family: Arial;
+	color: white;
 	border-spacing: 0px;
 	border-collapse: collapse;
 }
 
 th{
 	text-align: left;
+	font-style: underlined;
 	height: 22px;
 }
 
