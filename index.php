@@ -106,7 +106,7 @@
 						<tr>
 							<td>
 								<table>
-									<th id="atk1_name"></th>
+									<th id="atk1_name" class="underlineMe"></th>
 									<th id="atk1_cost"></th>
 								</table>
 							</td>
@@ -117,7 +117,7 @@
 						<tr>
 							<td>
 								<table>
-									<th id="atk2_name"></th>
+									<th id="atk2_name" class="underlineMe"></th>
 									<th id="atk2_cost"></th>
 								</table>
 						</td>
@@ -128,7 +128,7 @@
 						<tr>
 							<td>
 								<table>
-									<th id="atk3_name"></th>
+									<th id="atk3_name" class="underlineMe"></th>
 									<th id="atk3_cost"></th>
 								</table>
 							</td>

@@ -199,6 +199,10 @@ body {
 	float: left;
 }
 
+.underlineMe{
+	text-decoration: underline;	
+}
+
 table{
 	font-size: 9pt;
 	font-family: Arial;
@@ -209,7 +213,6 @@ table{
 
 th{
 	text-align: left;
-	font-style: underlined;
 	height: 22px;
 }
 
