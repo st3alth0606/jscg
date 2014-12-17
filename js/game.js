@@ -16,7 +16,6 @@ var socket;
 //Percentage of Width/HeiWght to snap within (as decimal).
 var snappiness = 1/2;
 
-
 //Run this when the page loads
 $( document ).ready( function() {
 	//Lock Field
@@ -88,13 +87,12 @@ function initField(){
     initDraggable();
 
     $('#end-turn').click(function(){
-        if(devMode) //neko
+        if(devMode)
             drawCard(Math.round(Math.random()*14), 'player');
         else
     	   socket.emit('end_turn', '');
     });
 }
-
 
 /**
  * Get the array of cards from the database.
@@ -107,7 +105,6 @@ function jsonGetCards(){
         initField();
     });
 }
-
 
 /**
  * Borrowed Godsend
@@ -154,15 +151,14 @@ function unlockField(){
 function initDraggable(){
     $( '.player.card' ).draggable();	//Set all objects with class 'card' to be draggable
 
-
     $( '.player.card' ).mousedown(function(event) {   //Mousedown listener to store card position.
         switch (event.which) {
             //Left Click
             case 1:
                 $( this ).addClass('selected-card');
-                updateInspector( $(this) );
-
                 $( this ).css('z-index', 99999); //Bring card to front.
+
+                updateInspector( $(this) );
                 break;
         }
     });
@@ -184,13 +180,15 @@ function initDraggable(){
             	var parent = $( this ).parent().attr('id');
             	var target = nearestSlotCheck( $(this) );
 
-                $( this ).remove();
-
             	if(parent === target){
-            		drawCard(cardId, 'player');
+                    $( this ).css('left', '0px');
+                    $( this ).css('top', '0px');
+                    $( this ).removeClass('selected-card');
             	}
             	else{
-                    if(devMode) //neko
+                    $( this ).remove();
+
+                    if(devMode)
                         playCard(cardId, target.split('-')[1], 'player');
                     else{
                         updateHands();
