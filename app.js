@@ -1,15 +1,15 @@
 // Main Server File
-
 var eiffel = 0;
 var port = 8080
+var cardLibrary = [];
 var playerList = [];
 var matches = [];
 var express = require('express'),
 	app = express();
-	
-var io = require('socket.io').listen(app.listen(port));
+	io = require('socket.io').listen(app.listen(port));
 
 console.log('Jscg is running on http://localhost:' + port);
+// jsonGetCards();
 
 // Initialize a new socket.io application, named 'chat'
 var chat = io.on('connection', function(socket){
@@ -63,6 +63,18 @@ var chat = io.on('connection', function(socket){
 
 	socket.emit('connected', '');
 });
+
+/**
+ * Get the array of cards from the database.
+ */
+function jsonGetCards(){ //FIXME NO JQUERY
+	console.log('Attempting to load card library.');
+    $.getJSON( "get_cards.php", function( data ){
+        $.each( data, function( key, val ){
+            cardLibrary[key] = val;
+        });
+    });
+}
 
 /*
  * Attempts to find a match for the player (socket)
