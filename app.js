@@ -64,6 +64,10 @@ var chat = io.on('connection', function(socket){
 	socket.emit('connected', '');
 });
 
+/*
+ * Attempts to find a match for the player (socket)
+ * If a match isn't found creates a new one.
+ */
 function findMatch(socket){
 	var match;
 	var foundMatch = false;
@@ -91,6 +95,9 @@ function findMatch(socket){
 	}
 }
 
+/*
+ * Begins a match
+ */
 function startMatch(id){
 	var match = matches[id];
 
@@ -111,6 +118,9 @@ function startMatch(id){
 	playerList[match.players[match.playerTurn]].emit('start_turn', '');
 }
 
+/*
+ * Draws a card for the given player, emits message to all players
+ */
 function drawCard(matchId, playerIndex){
 	if(playerIndex !== 0 && playerIndex !== 1)	//Throw away invalid requests
 		return false;
@@ -128,20 +138,29 @@ function drawCard(matchId, playerIndex){
 	});
 }
 
+/*
+ * Returns true if the method is allowed, false otherwise
+ */
 function validMove(player, cardId, target){
 	var match = matches[player.match];
 
-	if(match.players[match.playerTurn] !== player.id)	//If it's not the given player's turn
+	if(match.players[match.playerTurn] !== player.id) //If it's not the given player's turn
 		return false;
 
 	//I will eventually hate myself for this method
 	return true;
 }
 
+/*
+ * Will one day return the top card of the deck
+ */
 function getTopCard(){
 	return Math.round(Math.random()*2)+14;
 }
 
+/*
+ * Returns a new empty match object
+ */
 function getNewMatch(){
 	var match = {};
 
