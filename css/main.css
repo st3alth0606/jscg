@@ -62,10 +62,11 @@ body {
 	position: relative;
 	float: left;
 	margin: 15px;
-	box-sizing:border-box;
-	border: 1px solid black;
 	background-image: url("../img/cards/0.png");
 	background-size: 100% 100%;
+	box-sizing:border-box;
+	border: 1px solid black;
+	border-radius: 9px; 
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 }
@@ -112,12 +113,9 @@ body {
 	height: 105px;
 	left: 95px;
 	margin-right: 190px;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-	box-sizing: border-box;
 	background-image: url("../img/tiles/cardzone.png");
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
+	border-radius: 3px;
+	box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.6);
 }
 
 .specialzone{
@@ -125,12 +123,10 @@ body {
 	float: left;
 	width: 75px;
 	height: 105px;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
 	margin: 5px 10px 5px 10px;
 	background-image: url("../img/tiles/cardzone.png");
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
+	border-radius: 3px;
+	box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.6);
 }
 
 /* A card */
@@ -139,10 +135,10 @@ body {
 	height:105px;
 	font-size: .9em;
 	position: relative;
-	left: -1px;
 	float: left;
 	box-sizing:border-box;
 	border: 1px solid black;
+	border-radius: 3px; 
 	background-image: url("../img/0.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
@@ -161,12 +157,9 @@ body {
 	height:105px;
 	float: left;
 	margin: 0px 5px 0px 5px;
-	border-left: 1px solid black;
-	border-right: 1px solid black;
-	box-sizing:border-box;
 	background-image: url("../img/tiles/cardzone.png");
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
+	border-radius: 3px; 
+	box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.6);
 }
 
 .outer-row{
