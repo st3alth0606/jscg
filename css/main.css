@@ -24,7 +24,7 @@ body {
 	height: 100%;
 	background-image: url("../img/tiles/grassplain.png");
 	margin-right: 255px;
-	overflow: auto;
+	overflow: hidden;
 }
 
 #centerfield{
