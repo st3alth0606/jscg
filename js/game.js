@@ -263,7 +263,8 @@ function drawCard(cardId, owner){
  * Places a card on a field slot.
  */
 function playCard(cardId, target, owner){
-	$('#'+owner+'-'+target).append(getCard(cardId, owner, 'position:absolute'));
+    // $('#'+owner+'-'+target).append(getCard(cardId, owner, 'position:absolute'));
+	$('#'+owner+'-'+target).append(getCard(cardId, owner));
 }
 
 /**
