@@ -146,6 +146,10 @@ body {
 	-webkit-box-sizing:border-box;
 }
 
+.characterzone > .card{
+	position: absolute;
+}
+
 .inslot{
 	position: absolute !important;
 }
