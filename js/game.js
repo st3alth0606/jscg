@@ -330,7 +330,7 @@ function updateInspector(obj){
  */
 function decodeElement(string, target){
 	target.html(' ');
-	if(string == ''){
+	if(string === ''){
 		return;
 	}
 	var code = JSON.parse(string);

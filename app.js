@@ -158,7 +158,12 @@ function validMove(player, cardId, target){
 
 	if(match.players[match.playerTurn] !== player.id) //If it's not the given player's turn
 		return false;
-
+	
+	if( !(cardLibrary[cardId].type === 'Character' && target === 'characterzone'))
+		return false;
+	
+	if( !(cardLibrary[cardId].type === 'Resource' && target === 'resourcezone'))
+		return false;
 	//I will eventually hate myself for this method
 	return true;
 }
