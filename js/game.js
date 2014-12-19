@@ -67,7 +67,7 @@ function initConnection(){
     });
 
     socket.on('move', function(cardId, target, owner){
-    	playCard(cardId, target, owner);
+    	playCard(cardId, target.split('-')[1], owner);
     });
 
     socket.on('start_turn', function(data){
