@@ -19,7 +19,7 @@
 					<div class="specialzone"></div>
 					<div class="zone-container">
 						<div id="opponent-resourcezone" class="resourcezone">
-							<div id="paid-opponent" class="manaslot"></div>
+							<div id="rested-opponent" class="manaslot"></div>
 							<div id="dark-opponent" class="manaslot"></div>
 							<div id="light-opponent" class="manaslot"></div>
 							<div id="air-opponent" class="manaslot"></div>
@@ -69,7 +69,7 @@
 							<div id="air-player" class="manaslot"></div>
 							<div id="light-player" class="manaslot"></div>
 							<div id="dark-player" class="manaslot"></div>
-							<div id="paid-player" class="manaslot"></div>
+							<div id="rested-player" class="manaslot"></div>
 						</div>
 					</div>
 					<div class="specialzone"></div>

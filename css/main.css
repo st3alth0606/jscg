@@ -87,7 +87,7 @@ body {
 	transform:translateX(-50%);
 }
 
-.tapped{
+.rested{
     -ms-transform: rotate(90deg); /* IE 9 */
     -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
     transform: rotate(90deg);
@@ -125,7 +125,15 @@ body {
 }
 
 .manaslot{
+	
+}
 
+.resourcezone > .manaslot > .card{
+	margin-left: -73px;	
+}
+
+.resourcezone > .manaslot > .card:first-child{
+	margin-left: 0px;		
 }
 
 .specialzone{
