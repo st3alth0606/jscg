@@ -265,9 +265,9 @@ function playCard(cardId, target, owner){
     //     $('#opponent-hand').children()[0].remove(); //too easy?
     // }
 
-    if(cardLibrary[cardId]).type === 'Resource'){
+    if(cardLibrary[cardId].type === 'Resource'){
         //Find its type (fire, etc.)
-
+	$('#'+cardLibrary[cardId].race+'-'+owner).append(getCard(cardId, owner));
         //Build Jquery selector $('#' + ......)
         //and append card to selector.
     }

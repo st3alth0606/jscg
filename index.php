@@ -18,7 +18,17 @@
 				<div class="zonerow">
 					<div class="specialzone"></div>
 					<div class="zone-container">
-						<div id="opponent-resourcezone" class="resourcezone"></div>
+						<div id="opponent-resourcezone" class="resourcezone">
+							<div id="paid-opponent" class="manaslot"></div>
+							<div id="dark-opponent" class="manaslot"></div>
+							<div id="light-opponent" class="manaslot"></div>
+							<div id="air-opponent" class="manaslot"></div>
+							<div id="earth-opponent" class="manaslot"></div>
+							<div id="water-opponent" class="manaslot"></div>
+							<div id="fire-opponent" class="manaslot"></div>
+							<div id="rng-opponent" class="manaslot"></div>
+							<div id="phy-opponent" class="manaslot"></div>
+						</div>
 					</div>
 					<div class="specialzone"></div>
 				</div>
@@ -50,7 +60,17 @@
 				<div class="zonerow">
 					<div class="specialzone"></div>
 					<div class="zone-container">
-						<div id="player-resourcezone" class="resourcezone cardslot"></div>
+						<div id="player-resourcezone" class="resourcezone cardslot">
+							<div id="phy-player" class="manaslot"></div>
+							<div id="rng-player" class="manaslot"></div>
+							<div id="fire-player" class="manaslot"></div>
+							<div id="water-player" class="manaslot"></div>
+							<div id="earth-player" class="manaslot"></div>
+							<div id="air-player" class="manaslot"></div>
+							<div id="light-player" class="manaslot"></div>
+							<div id="dark-player" class="manaslot"></div>
+							<div id="paid-player" class="manaslot"></div>
+						</div>
 					</div>
 					<div class="specialzone"></div>
 				</div>
