@@ -52,7 +52,8 @@ function initConnection(){
     }
 
 	// connect to the socket
-    socket = io('http://74.207.228.248:8080');
+    socket = io('http://74.207.228.248:8080'); //running on the server
+    // socket = io('http://localhost:8080'); //use local
 
     socket.on('draw', function(cardId, target){
     	drawCard(cardId, target)
@@ -163,7 +164,6 @@ function initDraggable(){
         }
     });
 
-
     $( '.player.card' ).mouseup(function(event) {	//Mouseup listener to update card position (snap to slot or reset).
     	//Get timestamp
     	var d = new Date();
@@ -240,7 +240,7 @@ function updateHands(){
     });
 }
 
-/*
+/**
  * Creates an element of a given card.
  */
 function getCard(cardId, owner, styles){
@@ -257,23 +257,21 @@ function drawCard(cardId, owner){
     updateHands();
 }
 
-/*
+/**
  * Places a card on a field slot.
  */
 function playCard(cardId, target, owner){
-    // if(owner === 'opponent'){
-    //     $('#opponent-hand').children()[0].remove(); //too easy?
-    // }
+    //Remove a card from the opponent's hand.
+    if(owner === 'opponent'){
+        $('#opponent-hand').children()[0].remove();
+    }
 
-    if(cardLibrary[cardId].type === 'Resource'){
-        //Find its type (fire, etc.)
-	$('#'+cardLibrary[cardId].race+'-'+owner).append(getCard(cardId, owner));
-        //Build Jquery selector $('#' + ......)
-        //and append card to selector.
-    }
-    else{
+    //Delegate resource to slot
+    if(cardLibrary[cardId].type === 'Resource')
+        $('#'+cardLibrary[cardId].race+'-'+owner).append(getCard(cardId, owner));
+    //Play other cards normally
+    else
         $('#'+owner+'-'+target).append(getCard(cardId, owner));
-    }
 }
 
 /**

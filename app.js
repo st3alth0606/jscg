@@ -1,6 +1,6 @@
 // Main Server File
 var eiffel = 0;
-var port = 8080
+var port = 8080;
 var cardLibrary = [];
 var playerList = [];
 var matches = [];
@@ -113,7 +113,8 @@ function jsonGetCards(){ //FIXME NO JQUERY
 	//Connect to Database
 	var connection = mysql.createConnection({
 	    database:'jscg',
-	    host:'localhost',
+	    // host:'74.207.228.248', //running locally
+	    host:'localhost', //running on the server
 	    user:'jscg',
 	    password:'pqR3WzERpMpyNCp8'
 	});
