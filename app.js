@@ -243,8 +243,8 @@ function getNewMatch(){
 
 	match.id = eiffel++;
 	match.players = [];
-	match.field = {};
-	match.field.a = {
+	match.fields = [];
+	match.fields[0] = {
 		'deck': [],
 		'hand': [],
 		'resources': [],
@@ -253,7 +253,7 @@ function getNewMatch(){
 		'slot3': [],
 		'slot4': []
 	};
-	match.field.b = {
+	match.fields[1] = {
 		'deck': [],
 		'hand': [],
 		'resources': [],
